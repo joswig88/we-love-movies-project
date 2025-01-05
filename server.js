@@ -1,7 +1,7 @@
 const app = require("./src/app");
 const knex = require("./src/db/connection");
 
-const PORT = process.env.PORT || 10000; // Use Render's provided PORT or fallback to 5000
+const port = process.env.PORT || 4000; // Use Render's provided PORT or fallback to 5000
 
 const listener = () => console.log(`Listening on Port ${PORT}!`);
 
