@@ -1,10 +1,6 @@
-const path = require('./knexfile');
+const path = require("path"); // Use the correct 'path' module
 
-require("dotenv").config();
-
-// const {
-//   DATABASE_URL = "postgresql://postgres@localhost/postgres",
-// } = process.env;
+require("dotenv").config(); // Load environment variables from .env file
 
 const { DATABASE_URL } = process.env;
 
