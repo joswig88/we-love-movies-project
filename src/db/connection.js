@@ -1,7 +1,7 @@
 const environment = process.env.NODE_ENV || "development";
-// knex file path that gets configuration for current environment
-const config = require("../../../../../Downloads/WeLoveMovies-Joseph-Swiger/knexfile")[environment];
-// brings in knex library
+// Correctly require the knexfile using a relative path
+const config = require("../../knexfile")[environment];
+// Bring in knex and pass the configuration
 const knex = require("knex")(config);
 
 module.exports = knex;
