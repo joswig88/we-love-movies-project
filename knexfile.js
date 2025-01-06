@@ -8,26 +8,24 @@ const {
 
 module.exports = {
   development: {
-    client: "postgresql",
-    connection: process.env.DEVELOPMENT_DATABASE_URL,
-    pool: { min: 0, max: 5 },
+    client: "pg",
+    connection: "postgres://your_local_db_connection_string",
     migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
+      directory: "./migrations",
     },
     seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
+      directory: "./seeds",
     },
   },
 
   production: {
-    client: "postgresql",
-    connection: process.env.PRODUCTION_DATABASE_URL,
-    pool: { min: 0, max: 5 },
+    client: "pg",
+    connection: process.env.DATABASE_URL,
     migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
+      directory: "./migrations",
     },
     seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
+      directory: "./seeds",
     },
   },
 
