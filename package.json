@@ -13,7 +13,7 @@
     "reset": "npm run rollback && npm run migrate && npm run seed",
     "rollback": "set USER=Luis && knex migrate:rollback",
     "seed": "knex seed:run",
-    "start": "node server.js", // or the entry file for your server
+    "start": "node server.js", 
     "start:dev": "set USER=Luis && nodemon src/server.js",
     "start:solution": "docker-compose up --build",
     "test": "jest",
