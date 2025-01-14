@@ -8,27 +8,27 @@ module.exports = {
     client: "pg",
     connection: {
       connectionString: PRODUCTION_DATABASE_URL,
-      ssl: { rejectUnauthorized: false }, // Add SSL if required
+      ssl: { rejectUnauthorized: false }, // For secure connections
     },
     migrations: {
-      directory: path.join(__dirname, "db", "migrations"), // Corrected path to migrations
+      directory: path.join(__dirname, "src", "db", "migrations"), // Adjusted path for migrations
     },
     seeds: {
-      directory: path.join(__dirname, "db", "seeds"), // Corrected path to seeds
+      directory: path.join(__dirname, "src", "db", "seeds"), // Adjusted path for seeds
     },
     pool: {
       min: 2,
-      max: 10, // For production database pooling
+      max: 10,
     },
   },
   development: {
     client: "pg",
-    connection: process.env.DATABASE_URL || "postgresql://postgres:Zdy1b4Ehv7pCrQkm@hospitably-paramount-turaco.data-1.use1.tembo.io:5432/postgres", // Default fallback for local dev
+    connection: process.env.DATABASE_URL || "postgresql://postgres@localhost/postgres",
     migrations: {
-      directory: path.join(__dirname, "db", "migrations"),
+      directory: path.join(__dirname, "src", "db", "migrations"), // Adjusted path for migrations
     },
     seeds: {
-      directory: path.join(__dirname, "db", "seeds"),
+      directory: path.join(__dirname, "src", "db", "seeds"), // Adjusted path for seeds
     },
   },
 };
