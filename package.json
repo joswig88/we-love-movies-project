@@ -9,11 +9,11 @@
     "docker:stop": "docker stop $(docker ps -q)",
     "docker:test": "docker run -t  thinkful-ed/zid-be-project-movie-01-qualified npm test",
     "knex": "knex",
-   "migrate": "knex migrate:latest",
+    "migrate": "knex migrate:latest",
     "reset": "npm run rollback && npm run migrate && npm run seed",
     "rollback": "set USER=Luis && knex migrate:rollback",
     "seed": "knex seed:run",
-    "start": "node src/server.js", 
+    "start": "node src/server.js",
     "start:dev": "set USER=Luis && nodemon src/server.js",
     "start:solution": "docker-compose up --build",
     "test": "jest",
@@ -29,7 +29,7 @@
     "knex": "^3.1.0",
     "lodash": "^4.17.21",
     "morgan": "^1.10.0",
-    "pg": "^8.13.1",
+    "pg": "^8.11.3",
     "sqlite3": "^5.0.0"
   },
   "devDependencies": {

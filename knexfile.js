@@ -2,7 +2,7 @@ const path = require("path");
 require("dotenv").config();
 
 const {
-  DATABASE_URL = "postgresql://postgres:password@localhost/postgres",
+  DATABASE_URL = "postgresql://postgres:Zdy1b4Ehv7pCrQkm@hospitably-paramount-turaco.data-1.use1.tembo.io:5432/postgres",
   PRODUCTION_DATABASE_URL,
 } = process.env;
 
